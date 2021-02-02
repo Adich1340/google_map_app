@@ -41,7 +41,7 @@ function App() {
             <h4>
               {location.country_name
                 ? `Country: ${location.country_name}`
-                : "No Country detected"}
+                : "Country: No Country detected"}
             </h4>
           </div>
         </>
