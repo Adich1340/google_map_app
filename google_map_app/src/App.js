@@ -8,11 +8,10 @@ function App() {
   const [location, setLocation] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
-      await fetch(`https://api.ipdata.co/?api-key=${IPDATA_KEY}`)
+    const fetchData = () => {
+      fetch(`https://api.ipdata.co/?api-key=${IPDATA_KEY}`)
         .then((response) => response.json())
         .then((responseJson) => setLocation(responseJson));
-      console.log(location);
     };
     fetchData();
   }, []);
